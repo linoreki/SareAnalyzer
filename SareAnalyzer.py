@@ -1,10 +1,16 @@
 import socket
+import os
 import platform
 from colorama import init, Fore
 from scapy.all import ARP, Ether, srp, sniff, IP, Ether
 from tqdm import tqdm
 
 init(autoreset=True)
+
+
+system_name = platform.system()
+print(system_name)
+
 
 header = f"""
 {Fore.CYAN}
@@ -123,6 +129,11 @@ def scan_ports(target, start_port, end_port, timeout, tcp=True, udp=True):
     input("Press Enter to continue...")
 
 def packet_callback_inputs():
+    if system_name == "Windows":
+        os.system("netsh interface show interface")
+    elif system_name == "linux":
+        os.system("netsh | echo ""interface""")
+    
     iface = input(Fore.BLUE + "Enter the network interface to listen on (e.g., eth0): ")
     print(f"Listening for packets on interface {iface} ...")
 
