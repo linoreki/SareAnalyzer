@@ -6,12 +6,10 @@ from scapy.all import ARP, Ether, srp, sniff, IP, Ether
 from tqdm import tqdm
 import shutil
 import textwrap
+
 init(autoreset=True)
 
-
 system_name = platform.system()
-print(system_name)
-
 
 header = f"""
 {Fore.CYAN}
@@ -25,7 +23,7 @@ header = f"""
 >>===============================================================<<
                                                        
 {Fore.RESET}
-{Fore.YELLOW}  ======= WELCOME TO THE NETWORK ANALYZER =======
+{Fore.YELLOW}  ======= WELCOME TO THE NETWORK ANALYZER {system_name.upper()} USER =======
 {Fore.RED}  ======= By Linoreki =======
 {Fore.RESET}
 """
