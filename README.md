@@ -21,13 +21,13 @@
 - Python 3.x
 - `pip` (gestor de paquetes de Python)
 
-### Instalación de dependencias
+### Instalación del repositorio:
 
-1. Clona el repositorio:
    ```sh
    git clone https://github.com/tuusuario/SareAnalyzer.git
    cd SareAnalyzer
-## Instala las dependencias necesarias:
+   ````
+### Instala las dependencias necesarias:
 
   ```sh
   pip install -r requirements.txt
