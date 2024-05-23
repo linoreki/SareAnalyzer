@@ -4,7 +4,8 @@ import platform
 from colorama import init, Fore
 from scapy.all import ARP, Ether, srp, sniff, IP, Ether
 from tqdm import tqdm
-
+import shutil
+import textwrap
 init(autoreset=True)
 
 
@@ -25,13 +26,21 @@ header = f"""
                                                        
 {Fore.RESET}
 {Fore.YELLOW}  ======= WELCOME TO THE NETWORK ANALYZER =======
-{Fore.RED}  =======          By Linoreki              =======
+{Fore.RED}  ======= By Linoreki =======
 {Fore.RESET}
 """
 
+def center_text(text, width):
+    return "\n".join(line.center(width) for line in text.splitlines())
+
+# Get terminal width
+terminal_width = shutil.get_terminal_size().columns
+
+# Center the header
+centered_header = center_text(header, terminal_width)
 def menu():
     while True:
-        print(header)
+        print(centered_header)
         print(Fore.BLUE + "1. Port Analyzer")
         print(Fore.GREEN + "2. Analyze Packets")
         print(Fore.RED + "3. Network Hosts")
