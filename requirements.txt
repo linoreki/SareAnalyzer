@@ -1,0 +1,9 @@
+# requirements.txt
+
+# Dependencias principales
+package1==1.0.0
+package2>=2.1.0
+
+# Dependencias adicionales para Windows
+# Npcap para captura de paquetes en Windows
+npcap==1.0.0
