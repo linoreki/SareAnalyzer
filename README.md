@@ -31,14 +31,15 @@
 
   ```sh
   pip install -r requirements.txt
+   ````
+### Dependencias adicionales para Windows
 
-  Dependencias adicionales para Windows
-  Para los usuarios de Windows, se recomienda instalar Npcap para la captura de paquetes. Puedes descargar Npcap desde aquí.
+Para los usuarios de Windows, se recomienda instalar Npcap para la captura de paquetes. Puedes descargar Npcap desde [aquí](https://npcap.org).
 
-## Uso
+
+## Uso:
 Para iniciar la herramienta, simplemente ejecuta el archivo `SareAnalyzer.py`:
 
   ```sh
   python SareAnalyzer.py
-
 
